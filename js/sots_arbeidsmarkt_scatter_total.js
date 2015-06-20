@@ -306,7 +306,7 @@ function drawScatter(data, wrapper, width, height, margin) {
 			.data(data.sort(function(a,b) { return b.Perc_Werkenden > a.Perc_Werkenden; })) //Sort so the biggest circles are below
 			.enter().append("circle")
 				.attr("class", function(d,i) { return "circle NL " + d.BeroepClass; })
-				.style("opacity", 0.5)
+				.style("opacity", 0.7)
 				.style("fill", function(d) {return sectorColor(d.Baan_sector);})
 				.attr("cx", function(d) {return xScale(d.Robotiseringskans);})
 				.attr("cy", function(d) {return yScale(d.Perc_Werkzoekenden);})

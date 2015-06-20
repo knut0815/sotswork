@@ -115,7 +115,6 @@
 	font-size:14px;
 	font-weight:400;
 	line-height:1.42857143;
-	text-align:left;
 	white-space:normal;
 	background-color:#fff;
 	-webkit-background-clip:padding-box;
@@ -128,6 +127,7 @@
 }
 .popover-content {
   padding: 9px 14px;
+  text-align: center;
 }
 .popover.top {
   margin-top: -10px;
