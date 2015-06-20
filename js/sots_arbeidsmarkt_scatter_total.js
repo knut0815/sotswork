@@ -777,6 +777,6 @@ legendCircle.append("circle")
 var bubbleSizeLegend = scatterNL.append("g").attr("class", "legendWrapper")
 				.attr("transform", "translate(" + 140 + "," + 10 +")");
 //Draw the bubble size legend
-bubbleLegend(bubbleSizeLegend, rScale, legendSizes = [0.02, 0.06], legendName = "Relatieve aandel werkenden");	
+bubbleLegend(bubbleSizeLegend, rScale, legendSizes = [0.02, 0.06], legendName = "Relatieve aandeel werkenden");	
 
 
