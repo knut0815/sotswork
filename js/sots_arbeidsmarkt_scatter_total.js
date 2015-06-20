@@ -58,7 +58,7 @@ function createScatterLegend() {
 			  .attr("transform", function(d,i) { return "translate(" + 0 + "," + (i * legendSectorHeight) + ")"; })
 			  .style("cursor", "pointer")
 			  .on("mouseover", sectorSelect(0.02))
-			  .on("mouseout", sectorSelect(0.5))
+			  .on("mouseout", sectorSelect(0.7))
 			  .on("click", sectorClick);
 	 
 	//Non visible white rectangle behind square and text for better UX
@@ -108,7 +108,7 @@ function sectorClick(d,i) {
 	/////////////////// NL ///////////////////	
 	//Only show the circles of the chosen sector
 	scatterNL.selectAll("circle.NL")
-		.style("opacity", 0.5)
+		.style("opacity", 0.7)
 		.style("visibility", function(d) {
 			if (d.Baan_sector != chosen) return "hidden";
 			else return "visible";
@@ -133,12 +133,12 @@ function resetClick() {
 	//Activate the mouse over and mouse out events of the legend
 	d3.selectAll(".scatterLegendSquare")
 		.on("mouseover", sectorSelect(0.02))
-		.on("mouseout", sectorSelect(0.5));
+		.on("mouseout", sectorSelect(0.7));
 
 	/////////////////// NL ///////////////////	
 	//Show all circles
 	scatterNL.selectAll("circle.NL")
-		.style("opacity", 0.5)
+		.style("opacity", 0.7)
 		.style("visibility", "visible");
 
 	//Activate all pop-over events
@@ -159,7 +159,7 @@ function removeScatterTooltip (d, i) {
 	var element = d3.selectAll(".circle.NL."+d.BeroepClass);
 		
 	//Fade out the bubble again
-	element.style("opacity", 0.5);
+	element.style("opacity", 0.7);
 	
 	//Hide tooltip
 	$('.popover').each(function() {
