@@ -13,7 +13,6 @@ var scatterMargin = {left: 50, top: 50, right: 20, bottom: 50},
 	scatterHeight = scatterWidth*2/3,
 	scatterLegendMargin = {left: 0, top: 10, right: 0, bottom: 10},
 	scatterLegendWidth = $(".dataresource.scatterLegend").width() - scatterLegendMargin.left - scatterLegendMargin.right,
-	legendSectorHeight = 20,
 	scatterLegendHeight = 310;
 
 //Create and SVG for each element
@@ -41,8 +40,9 @@ var scatterLegend = svgScatterLegend.append("g").attr("class", "legendWrapper")
 ///////////////////////////////////////////////////////////////////////////
 function createScatterLegend() {
 	
-	var legendRectSize = 15, //dimensions of the colored square
-		legendMaxWidth = 125; //maximum size that the longest element will be - to center content
+	var legendRectSize = 20, //dimensions of the colored square
+		legendSectorHeight = 30,
+		legendMaxWidth = 250; //maximum size that the longest element will be - to center content
 					
 	//Create container for all rectangles and text 
 	var sectorLegendWrapper = scatterLegend.append("g").attr("class", "legendWrapper")
@@ -75,12 +75,12 @@ function createScatterLegend() {
 		  .style('fill', function(d) {return d;});                                 
 	//Append text to Legend
 	sectorLegend.append('text')                                     
-		  .attr('transform', 'translate(' + (-legendMaxWidth/2 + 22) + ',' + (legendRectSize/2) + ')')
+		  .attr('transform', 'translate(' + (-legendMaxWidth/2 + legendRectSize + 8) + ',' + (legendRectSize/2) + ')')
 		  .attr("class", "legendText")
 		  .style("text-anchor", "start")
 		  .attr("dy", ".30em")
 		  //.attr("fill", "#949494")
-		  .style("font-size", "10px")			  
+		  .style("font-size", "12px")			  
 		  .text(function(d,i) { return sectorColor.domain()[i]; });  	
 		
 };//function createScatterLegend
@@ -395,7 +395,7 @@ function bubbleLegend(wrapperVar, scale, sizes, titleName) {
 		.attr("y", 0 + "px")
 		.attr("dy", "1em")
 		.text(titleName)
-		.call(wrap, 80);
+		.call(wrap, 100);
 		
 	wrapperVar.append("circle")
         .attr('r', scale(legendSize1))
