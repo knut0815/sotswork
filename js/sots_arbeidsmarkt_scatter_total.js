@@ -40,8 +40,8 @@ var scatterLegend = svgScatterLegend.append("g").attr("class", "legendWrapper")
 ///////////////////////////////////////////////////////////////////////////
 function createScatterLegend() {
 	
-	var legendRectSize = 20, //dimensions of the colored square
-		legendSectorHeight = 30,
+	var legendRectSize = 15, //dimensions of the colored square
+		legendSectorHeight = 25,
 		legendMaxWidth = 250; //maximum size that the longest element will be - to center content
 					
 	//Create container for all rectangles and text 
@@ -80,7 +80,7 @@ function createScatterLegend() {
 		  .style("text-anchor", "start")
 		  .attr("dy", ".30em")
 		  //.attr("fill", "#949494")
-		  .style("font-size", "12px")			  
+		  .style("font-size", "11px")			  
 		  .text(function(d,i) { return sectorColor.domain()[i]; });  	
 		
 };//function createScatterLegend
