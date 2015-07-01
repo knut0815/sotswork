@@ -294,9 +294,9 @@ function drawScatter(data, wrapper, width, height, margin) {
 	wrapper.append("line")
 		.attr("class", "trendline")
 		.attr("x1", xScale(0.05))
-		.attr("y1", yScale(0.10259))
+		.attr("y1", yScale(0.101951))
 		.attr("x2", xScale(0.95))
-		.attr("y2", yScale(0.46655));
+		.attr("y2", yScale(0.397349));
 		
 	////////////////////////////////////////////////////////////	
 	/////////////////// Scatterplot Circles ////////////////////
